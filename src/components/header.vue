@@ -23,7 +23,7 @@ header {
   justify-content: space-around;
 }
 h2 {
-  color: #f351d0;
+  color: #ed91cb;
 }
 
 ul{
