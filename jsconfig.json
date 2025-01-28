@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
+    "baseUrl": "./", // Base para resolver caminhos relativos
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     }
   },
   "exclude": ["node_modules", "dist"]
