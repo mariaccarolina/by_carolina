@@ -1,50 +1,76 @@
-<script setup></script>
+<script setup>
+import linkedin from "../assets/linkedin-logo (1).svg";
+import github from "../assets/github-logo (1).svg"
+</script>
 
 <template>
   <header>
-    <h2>Carolina Oliveira</h2>
     <nav>
       <ul>
         <li>Início</li>
-        <li>Sobre mim</li>
-        <li>Experiências</li>
         <li>Projetos</li>
+        <li>Experiências</li>
       </ul>
     </nav>
+    <section>
+      <a href="https://www.linkedin.com/in/maria-carolina-28b300213/" target="_blank">
+          <img :src="linkedin" alt="logo do linkedin">
+      </a>
+      <a href="https://github.com/mariaccarolina" target="_blank">
+         <img :src="github" alt="logo do github">
+      </a>
+    </section>
   </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" >
 header {
-  background-color: #0b0b0b;
-  color: #ffffff;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  height: 12vh;
-  justify-content: space-around;
-  border-bottom-style: solid #151515;
+  margin: 10px 20px;
+  border: solid;
+  border-radius: 10px;
+  padding: 10px;
+  /* color: #fd6b9e; */
 
-  @media (max-width: 900px) {
+  ul{
+    list-style: none;
+    display: flex;
+    width: 20vw;
+    justify-content: space-between;
+   
+
+    li{
+      cursor: pointer;
+      color: #fd6b9e;
+
+     &:hover{
+       text-decoration: underline;
+     }
+    }
+  }
+
+  section{
+    width: 6vw;
+   display: flex;
+   justify-content: space-between;
+  }
+  /* @media (max-width: 900px) {
     flex-direction: column;
     justify-content: center;
-  }
-}
-h2 {
-  color: #ed91cb;
+  } */
 }
 
-ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 40vw;
+
+/* ul {
+ 
   @media (max-width: 900px) {
     width: 80vw;
   }
 
   li {
-    list-style: none;
-    cursor: pointer;
+   
   }
-}
+} */
 </style>
