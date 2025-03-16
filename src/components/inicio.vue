@@ -28,14 +28,27 @@ section{
     height: 86vh;
     align-items: center;
     justify-content: space-evenly;
+     @media (max-width: 900px) {
+   flex-direction: column-reverse;
+   height: auto;
+  }
     h2{
         font-size: 30px;
     }
     h1{
         font-size: 40px;
+         @media (max-width: 900px) {
+            font-size: 26px;
+         }
     }
     p{
         padding: 0 7px;
+    }
+
+    span{
+        @media (max-width: 900px) {
+            font-size: 26px;
+         }
     }
     .container{
         display: flex;
@@ -46,17 +59,30 @@ section{
     height: 45vh;
     border: solid ;
     border-radius: 10px;
+      @media (max-width: 900px) {
+        width: 90vw;
+        height: 60vh;
+        border: red;
+        
+   
+  }
 }
 
 img{
     border: solid #fd6b9e 5px;
     border-radius: 20px;
+     @media (max-width: 900px){
+        width: 70vw;
+     }
 }
 }
 
 .habilidades{
     display: flex;
     justify-content: space-evenly;
+     @media (max-width: 900px){
+        flex-wrap: wrap;
+     }
     h3{
         background-color: #fd6b9e;
         border-radius: 30px;

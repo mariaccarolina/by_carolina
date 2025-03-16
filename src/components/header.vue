@@ -34,11 +34,20 @@ header {
   padding: 10px;
   /* color: #fd6b9e; */
 
+     @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+  }
   ul{
     list-style: none;
     display: flex;
     width: 20vw;
     justify-content: space-between;
+     @media (max-width: 900px){
+      width: 80vw;
+     }
    
 
     li{
@@ -55,11 +64,12 @@ header {
     width: 6vw;
    display: flex;
    justify-content: space-between;
+     @media (max-width: 900px){
+      width: 80vw;
+      justify-content: center;
+     }
   }
-  /* @media (max-width: 900px) {
-    flex-direction: column;
-    justify-content: center;
-  } */
+
 }
 
 
