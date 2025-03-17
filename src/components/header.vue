@@ -48,7 +48,9 @@ header {
      @media (max-width: 900px){
       width: 80vw;
      }
-   
+    @media (max-width: 1100px){
+       width: 80vw;
+    }
 
     li{
       cursor: pointer;
@@ -65,8 +67,9 @@ header {
    display: flex;
    justify-content: space-between;
      @media (max-width: 900px){
-      width: 80vw;
-      justify-content: center;
+      width: 85vw;
+      justify-content: space-evenly;
+     
      }
   }
 
