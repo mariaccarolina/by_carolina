@@ -8,7 +8,7 @@ import { projetos} from '../data/projetos.js'
     <section>
         <div class="project-card" 
         v-for="projeto in projetos">
-         <a :href="projeto.link">
+         <a :href="projeto.link" target="_blank">
            <img :src="projeto.image" alt=""/>
          </a>
           <div class="containerCard">

@@ -56,7 +56,7 @@ section{
         justify-content: space-evenly;
     width: 42vw;
     text-align: center;
-    height: 45vh;
+    height:50vh;
     border: solid ;
     border-radius: 10px;
       @media (max-width: 900px) {
@@ -72,22 +72,24 @@ img{
     border: solid #fd6b9e 5px;
     border-radius: 20px;
      @media (max-width: 900px){
-        width: 70vw;
+        width: 90vw;
      }
 }
 }
 
 .habilidades{
     display: flex;
+     flex-wrap: wrap;
     justify-content: space-evenly;
      @media (max-width: 900px){
-        flex-wrap: wrap;
+       
      }
     h3{
          background-color: #ffa7c2;
         border-radius: 30px;
         padding: 0 10px;
         color: white;
+         max-width: 300px;
     }
 }
 
