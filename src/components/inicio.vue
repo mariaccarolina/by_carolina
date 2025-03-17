@@ -81,15 +81,15 @@ img{
     display: flex;
      flex-wrap: wrap;
     justify-content: space-evenly;
-     @media (max-width: 900px){
-       
-     }
     h3{
          background-color: #ffa7c2;
         border-radius: 30px;
         padding: 0 10px;
         color: white;
          max-width: 300px;
+          @media (max-width: 900px){
+            margin: 10px;
+     }
     }
 }
 
