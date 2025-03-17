@@ -84,7 +84,7 @@ img{
         flex-wrap: wrap;
      }
     h3{
-        background-color: #fd6b9e;
+         background-color: #ffa7c2;
         border-radius: 30px;
         padding: 0 10px;
         color: white;

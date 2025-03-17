@@ -1,15 +1,13 @@
 <script setup>
-import Header from './components/header.vue';
-import inicio from './components/inicio.vue';
-
+import Header from "./components/header.vue";
+import inicio from "./components/inicio.vue";
+import projetosCard from "./components/projetosCard.vue";
 </script>
 
 <template>
- <Header/>
-  <global/>
- <inicio/>
+  <global />
+  <Header />
+  <inicio />
+  <projetosCard />
 </template>
 
-<style scoped lang="scss">
-
-</style>
