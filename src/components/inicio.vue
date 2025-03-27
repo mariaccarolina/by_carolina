@@ -69,7 +69,7 @@ section{
 }
 
 img{
-    border: solid #fd6b9e 5px;
+    border: solid  #ffa7c2 4px;
     border-radius: 20px;
      @media (max-width: 900px){
         width: 90vw;
