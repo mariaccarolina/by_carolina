@@ -20,7 +20,6 @@ import Carol from "../assets/Carolina.png";
         <h3>Vue</h3>
         <h3>Sass</h3>
         <h3>styled-Components</h3>
-        <h3>Typescript</h3>
       </div>
     </div>
   </section>
@@ -66,6 +65,7 @@ section {
     @media (max-width: 900px) {
       width: 90vw;
       height: 60vh;
+      border: none;
     }
   }
 
