@@ -32,7 +32,6 @@ header {
   border: solid;
   border-radius: 10px;
   padding: 10px;
-  /* color: #fd6b9e; */
 
      @media (max-width: 900px) {
     flex-direction: column;
@@ -74,16 +73,4 @@ header {
   }
 
 }
-
-
-/* ul {
- 
-  @media (max-width: 900px) {
-    width: 80vw;
-  }
-
-  li {
-   
-  }
-} */
 </style>
