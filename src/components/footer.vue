@@ -47,13 +47,14 @@ import arrow from "../assets/arrow.svg";
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 40vh;
+    height: 70vh;
 
-    h3{
+    h2{
       margin: 10px;
     }
+    
     div{
-      margin: 10px;
+      margin: 25px;
       display: flex;
       justify-content: center;
         a{
@@ -61,7 +62,7 @@ import arrow from "../assets/arrow.svg";
           text-decoration: none;
           align-items: center;
           justify-content: space-around;
-          border: #ffa7c2 solid;
+          border: #be7cea solid;
           border-radius: 10px;
           width: 50vw;
         }

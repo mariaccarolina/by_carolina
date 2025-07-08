@@ -29,8 +29,8 @@ import { projetos } from "../data/projetos.js";
 h2 {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 32px;
-  color: #fd6b9e;
+  font-size: 1.8rem;
+  color: #be7cea;
 }
 section {
   display: flex;
@@ -45,7 +45,7 @@ section {
   display: flex;
   padding: 10px;
   border-radius: 10px;
-  border: #ffa7c2 solid;
+  border: #be7cea solid;
   text-align: center;
 
   @media (max-width: 900px) {
@@ -85,7 +85,7 @@ section {
   margin: 10px;
   flex-wrap: wrap;
   h4 {
-    background-color: #ffa7c2;
+    background-color: #be7cea;
     color: #fffbfa;
     padding: 8px;
     border-radius: 20px;

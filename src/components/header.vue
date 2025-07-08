@@ -1,76 +1,138 @@
 <script setup>
-import linkedin from "../assets/linkedin-logo (1).svg";
-import github from "../assets/github-logo (1).svg"
+import { ref } from "vue";
+
+const menuAberto = ref(false);
 </script>
 
 <template>
-  <header>
+  <header class="header">
     <nav>
-      <ul>
-        <li>Início</li>
-        <li>Projetos</li>
-        <li>Experiências</li>
+      <!-- Botão hambúrguer (só aparece no mobile) -->
+      <button class="hamburguer" @click="menuAberto = !menuAberto">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Menu de navegação -->
+      <ul :class="{ aberto: menuAberto }">
+        <li class="com-linha-esquerda">
+          <div class="linha-esquerda"></div>
+          <a href="#">Inicio</a>
+        </li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Projetos</a></li>
+        <li class="com-linha-direita">
+          <a href="#">Contato</a>
+          <div class="linha-direita"></div>
+        </li>
       </ul>
     </nav>
-    <section>
-      <a href="https://www.linkedin.com/in/maria-carolina-28b300213/" target="_blank">
-          <img :src="linkedin" alt="logo do linkedin">
-      </a>
-      <a href="https://github.com/mariaccarolina" target="_blank">
-         <img :src="github" alt="logo do github">
-      </a>
-    </section>
   </header>
 </template>
 
-<style lang="scss" >
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 20px;
-  border: solid;
-  border-radius: 10px;
-  padding: 10px;
 
-     @media (max-width: 900px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-   
-  }
-  ul{
-    list-style: none;
+
+<style lang="scss" scoped>
+.header {
+  background: transparent;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  height: 12vh;
+
+  nav {
     display: flex;
-    width: 20vw;
     justify-content: space-between;
-     @media (max-width: 900px){
-      width: 80vw;
-     }
-    @media (max-width: 1100px){
-       width: 80vw;
-    }
+    align-items: center;
 
-    li{
+    // Botão hamburguer (mobile)
+    .hamburguer {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
       cursor: pointer;
-      color: #fd6b9e;
 
-     &:hover{
-       text-decoration: underline;
-     }
+      span {
+        width: 25px;
+        height: 3px;
+        background-color: #be7cea;
+        border-radius: 2px;
+        transition: 0.3s;
+      }
+
+      @media (max-width: 768px) {
+        display: flex;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      list-style: none;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        a {
+          color: #be7cea;
+          text-decoration: none;
+          font-weight: 500;
+          transition: 0.3s;
+
+          &:hover {
+            color: #cccccc;
+          }
+        }
+
+        // Linha antes de "Inicio"
+        &.com-linha-esquerda .linha-esquerda {
+          width: 25vw;
+          height: 1px;
+          background-color: #cccccc;
+          margin-right: 20px;
+        }
+
+        // Linha depois de "Contato"
+        &.com-linha-direita .linha-direita {
+          width: 25vw;
+          height: 1px;
+          background-color: #cccccc;
+          margin-left: 20px;
+        }
+      }
+
+      // Estilo mobile (inicialmente escondido)
+      @media (max-width: 768px) {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: #1e1e1e;
+        flex-direction: column;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        display: none;
+        gap: 1.2rem;
+        z-index: 999;
+
+        // Quando menuAberto = true
+        &.aberto {
+          display: flex;
+        }
+
+        // Esconde os tracinhos no mobile
+        .linha-esquerda,
+        .linha-direita {
+          display: none;
+        }
+      }
     }
   }
-
-  section{
-    width: 6vw;
-   display: flex;
-   justify-content: space-between;
-     @media (max-width: 900px){
-      width: 85vw;
-      justify-content: space-evenly;
-     
-     }
-  }
-
 }
+
 </style>

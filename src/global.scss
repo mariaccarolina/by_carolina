@@ -1,13 +1,39 @@
+
+$color-bg: #222222; // fundo escuro
+$color-primary: #be7cea; // lilás principal
+$color-secondary: #ff61a6; // rosa vibrante
+$color-text: #ffffff; // texto branco
+$color-subtext: #cccccc; // cinza claro para parágrafos
+$color-border: #b68cff; // borda lilás
+
 *{
     margin: 0;;
     padding: 0;
     box-sizing: border-box;
-    background-color: #fffbfa;
-    color: #ffa7c2;
     font-family: "Inconsolata", monospace;
 }
 
-h1, h3, span{
-    color: #fd6b9e;
-    font-family: "Maven Pro", sans-serif;
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: $color-bg;
+    color: $color-subtext;
+    line-height: 1.6;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-primary;
+}
+
+a {
+    color: $color-primary;
+    text-decoration: none;
+    transition: 0.3s ease;
+
+    &:hover {
+        color: $color-secondary;
+    } }
