@@ -62,7 +62,7 @@ import arrow from "../assets/arrow.svg";
           text-decoration: none;
           align-items: center;
           justify-content: space-around;
-          border: #be7cea solid;
+          border: #be7cea 1px solid;
           border-radius: 10px;
           width: 50vw;
         }

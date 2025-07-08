@@ -35,17 +35,14 @@ const menuAberto = ref(false);
 
 <style lang="scss" scoped>
 .header {
-  background: transparent;
+  display: flex;
+  justify-content: center;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   height: 12vh;
+  text-align: center;
 
   nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    // Botão hamburguer (mobile)
     .hamburguer {
       display: none;
       flex-direction: column;
@@ -90,7 +87,6 @@ const menuAberto = ref(false);
           }
         }
 
-        // Linha antes de "Inicio"
         &.com-linha-esquerda .linha-esquerda {
           width: 25vw;
           height: 1px;
@@ -98,7 +94,6 @@ const menuAberto = ref(false);
           margin-right: 20px;
         }
 
-        // Linha depois de "Contato"
         &.com-linha-direita .linha-direita {
           width: 25vw;
           height: 1px;
@@ -107,7 +102,6 @@ const menuAberto = ref(false);
         }
       }
 
-      // Estilo mobile (inicialmente escondido)
       @media (max-width: 768px) {
         position: absolute;
         top: 70px;

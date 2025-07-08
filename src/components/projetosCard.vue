@@ -45,7 +45,7 @@ section {
   display: flex;
   padding: 10px;
   border-radius: 10px;
-  border: #be7cea solid;
+  border: #be7cea 1px  solid;
   text-align: center;
 
   @media (max-width: 900px) {
@@ -85,8 +85,7 @@ section {
   margin: 10px;
   flex-wrap: wrap;
   h4 {
-    background-color: #be7cea;
-    color: #fffbfa;
+    color: #cccccc;
     padding: 8px;
     border-radius: 20px;
     max-width: 200px;

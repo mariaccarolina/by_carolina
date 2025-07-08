@@ -72,7 +72,7 @@ import Carol from "../assets/Carolina.png";
     }
 
     a {
-      border: solid 2px #be7cea;
+      border: solid 1px #cccccc;
       border-radius: 30px;
       padding: 10px 20px;
       color: #be7cea;
