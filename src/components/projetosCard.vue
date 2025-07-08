@@ -34,7 +34,12 @@ h2 {
 }
 section {
   display: flex;
+  width: 100vw;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  div{
+    margin: 12px;
+  }
   @media (max-width: 900px) {
     flex-direction: column;
     align-items: center;
