@@ -1,5 +1,4 @@
 <script setup>
-import Carol from "../assets/Carolina.png";
 </script>
 
 <template>
@@ -11,13 +10,13 @@ import Carol from "../assets/Carolina.png";
         Desenvolvo sistemas com paixão por tecnologia, contribuindo com soluções inovadoras para desafios complexos.
       </p>
       <div class="links">
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
+        <a href="https://github.com/mariaccarolina" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/maria-carolina-oliveira-tech/" target="_blank">GitHub</a>
       </div>
     </div>
 
     <div class="foto">
-      <img :src="Carol" alt="Foto da Carolina" />
+      <img src="https://media1.tenor.com/m/AlUkiGkR2j8AAAAd/new-game-ahagon-umiko-programming.gif" alt="Foto da Carolina" />
     </div>
   </section>
 </template>
@@ -39,6 +38,9 @@ import Carol from "../assets/Carolina.png";
     gap: 2rem;
   }
 
+p{
+  font-size: 24px;
+}
   .texto {
     width: 40vw;
 
@@ -66,6 +68,9 @@ import Carol from "../assets/Carolina.png";
     display: flex;
     gap: 20px;
 
+    a{
+      font-size: 20px;
+    }
     @media (max-width: 768px) {
       justify-content: center;
       flex-wrap: wrap;
