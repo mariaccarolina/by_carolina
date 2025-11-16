@@ -88,6 +88,7 @@ p{
       &:hover {
         background-color: #be7cea;
         color: #1e1e1e;
+        border: none;
       }
     }
   }

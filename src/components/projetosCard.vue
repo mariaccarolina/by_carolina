@@ -4,21 +4,35 @@ import { projetos } from "../data/projetos.js";
 
 <template>
   <h2>Projetos</h2>
+
   <section>
-    <div class="project-card" v-for="projeto in projetos">
-      <a :href="projeto.link" target="_blank">
-        <img :src="projeto.image" alt="" />
-      </a>
-      <div class="containerCard">
-        <h3>{{ projeto.nome }}</h3>
-        <p>{{ projeto.descricao }}</p>
-        <p>
-          <a :href="projeto.repositorio" target="_blank">🔗Repositório</a>
-        </p>
-        <div class="tech">
-          <h4 v-for="(techologias, i) in projeto.techologias">
-            {{ techologias }}
-          </h4>
+    <div class="container">
+      <div class="project-card" v-for="projeto in projetos" :key="projeto.nome">
+        <a :href="projeto.link" target="_blank">
+          <img :src="projeto.image" alt="" />
+        </a>
+
+        <div class="containerCard">
+          <h3>{{ projeto.nome }}</h3>
+          <p>{{ projeto.descricao }}</p>
+
+          <p>
+            <a :href="projeto.repositorio" target="_blank">🔗 Repositório</a>
+          </p>
+
+          <div class="tech">
+            <h4 v-for="(tech, i) in projeto.techologias" :key="i">
+              {{ tech }}
+            </h4>
+          </div>
+
+          <p
+            v-for="(esp, index) in projeto.Especificações"
+            :key="'esp-' + index"
+            v-if="projeto.Especificações?.length"
+          >
+            {{ esp }}
+          </p>
         </div>
       </div>
     </div>
@@ -32,31 +46,38 @@ h2 {
   font-size: 1.8rem;
   color: #be7cea;
 }
+
+/* CENTRALIZA A SEÇÃO */
 section {
+  width: 100%;
   display: flex;
-  width: 100vw;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  div{
-    margin: 12px;
-  }
-  @media (max-width: 900px) {
-    flex-direction: column;
-    align-items: center;
-  }
+  justify-content: center;
 }
-.project-card {
-  width: 40%;
+
+/* CONTAINER CENTRALIZADO */
+.container {
   display: flex;
-  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
+/* CARD DE CADA PROJETO */
+.project-card {
+  width: 45%; /* 🔥 GARANTE 2 CARDS POR LINHA */
+  max-width: 500px;
+  display: flex;
+  padding: 20px;
   border-radius: 10px;
-  border: #be7cea 1px  solid;
+  box-shadow: #be7cea 1px 5px 7px 5px;
   text-align: center;
+  margin: 20px;
 
   @media (max-width: 900px) {
     width: 90%;
-    justify-content: center;
-    margin: 10px;
+    flex-direction: column;
+    align-items: center;
   }
 
   a {
@@ -69,35 +90,35 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /*preenche o espaço sem distorcer */
     border-radius: 10px;
   }
+
+ 
 }
 
+/* TEXTO AO LADO DA IMAGEM */
 .containerCard {
-  width: 50%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  text-align: center;
 }
 
+/* TECNOLOGIAS */
 .tech {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 10px;
   margin: 10px;
   flex-wrap: wrap;
+
   h4 {
     color: #cccccc;
     padding: 8px;
     border-radius: 20px;
-    max-width: 200px;
-    @media (max-width: 900px) {
-      padding: 5px;
-      margin: 5px;
-    }
+    background: #2d2d2d;
   }
 }
 </style>

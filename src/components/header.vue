@@ -8,19 +8,13 @@ const menuAberto = ref(false);
   <header class="header">
     <nav>
       <!-- Botão hambúrguer (só aparece no mobile) -->
-      <button class="hamburguer" @click="menuAberto = !menuAberto">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
       <!-- Menu de navegação -->
-      <ul :class="{ aberto: menuAberto }">
+      <ul>
         <li class="com-linha-esquerda">
           <div class="linha-esquerda"></div>
           <a href="#">Inicio</a>
         </li>
-        <li><a href="#">Sobre</a></li>
+        
         <li><a href="#">Projetos</a></li>
         <li class="com-linha-direita">
           <a href="#">Contato</a>
@@ -65,6 +59,7 @@ const menuAberto = ref(false);
     }
 
     ul {
+      margin-top: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -81,6 +76,7 @@ const menuAberto = ref(false);
           text-decoration: none;
           font-weight: 500;
           transition: 0.3s;
+          font-size: 24px;
 
           &:hover {
             color: #cccccc;
