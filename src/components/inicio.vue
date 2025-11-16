@@ -32,10 +32,9 @@
   flex-wrap: wrap;
 
   @media (max-width: 768px) {
-    flex-direction: column-reverse;
     height: auto;
     text-align: center;
-    gap: 2rem;
+  
   }
 
 p{
@@ -46,6 +45,12 @@ p{
 
     @media (max-width: 768px) {
       width: 90vw;
+
+      p{
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+}
     }
 
     h2 {

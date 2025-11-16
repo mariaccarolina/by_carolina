@@ -75,9 +75,11 @@ section {
   margin: 20px;
 
   @media (max-width: 900px) {
-    width: 90%;
+    width: 100%;
+    max-width: 500px;
     flex-direction: column;
     align-items: center;
+    padding: 15px;
   }
 
   a {
